@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SettingsViewController: UIViewController {
 
     @IBOutlet var colorView: UIView!
     
@@ -19,10 +19,17 @@ class ViewController: UIViewController {
     @IBOutlet var greenSlider: UISlider!
     @IBOutlet var blueSlider: UISlider!
     
+    @IBOutlet var redTextField: UITextField!
+    @IBOutlet var greenTextField: UITextField!
+    @IBOutlet var blueTextField: UITextField!
+    
+    @IBOutlet var doneButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        changeColor()
+        doneButton.layer.cornerRadius = 10
         
+        changeColor()
         changeLabelText()
     }
 
@@ -30,6 +37,9 @@ class ViewController: UIViewController {
         changeColor()
         
         changeLabelText()
+    }
+
+    @IBAction func doneButtonPressed() {
     }
     
     private func changeColor() {
